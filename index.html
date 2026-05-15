@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>EduNovaHub</title>
 
@@ -7,32 +8,50 @@
     body{
       margin:0;
       font-family:Arial;
-      background:#f4f7ff;
+      background:#eef2ff;
     }
 
     .header{
-      background:#4f46e5;
+      background:#4338ca;
       color:white;
-      padding:20px;
       text-align:center;
+      padding:25px;
+    }
+
+    .header h1{
+      margin:0;
+      font-size:40px;
     }
 
     .container{
       padding:20px;
     }
 
-    .card{
-      background:white;
-      padding:20px;
-      margin:15px 0;
-      border-radius:15px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    .section-title{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#222;
     }
 
-    a{
-      text-decoration:none;
-      color:#4f46e5;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:15px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      text-align:center;
+      font-size:20px;
       font-weight:bold;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:scale(1.05);
     }
   </style>
 </head>
@@ -46,22 +65,24 @@
 
   <div class="container">
 
-    <div class="card">
-      <h2>Class 8 Science Notes</h2>
-      <a href="#">Download PDF</a>
+    <div class="section-title">
+      Classes
     </div>
 
-    <div class="card">
-      <h2>Class 8 Maths Notes</h2>
-      <a href="#">Download PDF</a>
-    </div>
+    <div class="grid">
 
-    <div class="card">
-      <h2>Sanskrit Notes</h2>
-      <a href="#">Download PDF</a>
+      <div class="card">Class 6</div>
+      <div class="card">Class 7</div>
+      <div class="card">Class 8</div>
+      <div class="card">Class 9</div>
+      <div class="card">Class 10</div>
+      <div class="card">Class 11</div>
+      <div class="card">Class 12</div>
+
     </div>
 
   </div>
 
 </body>
+
 </html>
