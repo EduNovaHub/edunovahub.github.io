@@ -3,15 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Class 8</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>LearnHub - Class 8</title>
 
 <style>
-  .search-box{
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#333;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#4f46e5;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:yellow;
+}
+
+/* HERO */
+
+.hero{
+height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-margin-bottom:40px;
+background:linear-gradient(to right,#4f46e5,#7c3aed);
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+max-width:700px;
+}
+
+.hero button{
+padding:15px 35px;
+border:none;
+border-radius:12px;
+background:white;
+color:#4f46e5;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:scale(1.05);
+}
+
+/* SEARCH BAR */
+
+.search-box{
+text-align:center;
+margin:40px 0;
 }
 
 .search-box input{
@@ -24,151 +113,214 @@ outline:none;
 font-size:16px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
-.banner{
-  <div class="search-box">
 
-<input type="text" placeholder="Search subjects...">
+/* SECTION TITLE */
 
-</div>
-background:linear-gradient(to right,#2563eb,#4f46e5);
-padding:40px;
-border-radius:20px;
-text-align:center;
-color:white;
-margin-bottom:40px;
-}
-
-.banner h2{
-font-size:35px;
-margin-bottom:10px;
-}
-
-.banner p{
-font-size:18px;
-}
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f5f7ff;
-padding:40px;
-}
-<div class="banner">
-
-<h2>📚 Welcome to Class 8 Learning Hub</h2>
-
-<p>
-Free Notes, PDFs and Study Material for Students
-</p>
-
-</div>
-  <div class="search-box">
-
-<input type="text" placeholder="Search subjects...">
-
-</div>
 .heading{
 text-align:center;
-margin-bottom:50px;
+font-size:40px;
+margin-bottom:40px;
+color:#4f46e5;
 }
 
-.heading h1{
-font-size:50px;
-color:#2563eb;
-}
+/* SUBJECT CARDS */
 
-.heading p{
-margin-top:10px;
-font-size:18px;
-color:#555;
-}
-
-.subject-container{
+.subjects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
+gap:25px;
+padding:40px;
 }
 
-.subject-card{
+.card{
 background:white;
-padding:40px 20px;
+padding:30px;
 border-radius:20px;
 text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.subject-card:hover{
+.card:hover{
 transform:translateY(-10px);
 }
 
-.subject-card h2{
-margin:20px 0;
-color:#2563eb;
+.card h2{
+margin-bottom:15px;
+color:#4f46e5;
 }
 
-.subject-card p{
-color:#666;
+.card p{
 margin-bottom:20px;
 }
 
-.subject-card a{
-text-decoration:none;
-background:#2563eb;
+.card button{
+padding:12px 20px;
+border:none;
+background:#4f46e5;
 color:white;
-padding:12px 25px;
 border-radius:10px;
-display:inline-block;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+.card button:hover{
+background:#372fcf;
+}
+
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.feature-box{
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+.feature-box h3{
+margin-bottom:15px;
+color:#4f46e5;
+}
+
+/* FOOTER */
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
+footer p{
+margin:10px 0;
 }
 
 </style>
 
 </head>
-
 <body>
 
-<div class="heading">
+<!-- NAVBAR -->
 
-<h1>Class 8 Dashboard</h1>
+<nav>
+
+<div class="logo">LearnHub</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Classes</a></li>
+<li><a href="#">Notes</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Welcome to LearnHub</h1>
 
 <p>
-Select your subject and start learning.
+The best learning platform for students.
+Explore notes, videos, quizzes, and study materials.
 </p>
 
-</div>
+<button onclick="document.getElementById('subjects').scrollIntoView({behavior:'smooth'})">
+Start Learning
+</button>
 
-<div class="subject-container">
+</section>
 
-<div class="subject-card">
-<h2>📘 Maths</h2>
-<p>Chapter-wise maths notes and formulas.</p>
-<a href="maths.html">Open</a>
-</div>
+<!-- SEARCH BAR -->
 
-<div class="subject-card">
-<h2>🔬 Science</h2>
-<p>Easy science notes and explanations.</p>
-<a href="science.html">Open</a>
-</div>
+<div class="search-box">
 
-<div class="subject-card">
-<h2>📖 English</h2>
-<p>English chapters and grammar notes.</p>
-<a href="english.html">Open</a>
-</div>
-
-<div class="subject-card">
-<h2>🌍 SST</h2>
-<p>History, Civics and Geography notes.</p>
-<a href="sst.html">Open</a>
-</div>
+<input type="text" placeholder="Search subjects...">
 
 </div>
+
+<!-- SUBJECTS -->
+
+<h1 class="heading">Class 8 Subjects</h1>
+
+<section class="subjects" id="subjects">
+
+<div class="card">
+<h2>Mathematics</h2>
+<p>Learn algebra, geometry, and more.</p>
+<button>Open Subject</button>
+</div>
+
+<div class="card">
+<h2>Science</h2>
+<p>Physics, Chemistry and Biology notes.</p>
+<button>Open Subject</button>
+</div>
+
+<div class="card">
+<h2>English</h2>
+<p>Grammar, writing, and literature.</p>
+<button>Open Subject</button>
+</div>
+
+<div class="card">
+<h2>Social Science</h2>
+<p>History, Geography and Civics.</p>
+<button>Open Subject</button>
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<h1 class="heading">Why Students Love LearnHub</h1>
+
+<section class="features">
+
+<div class="feature-box">
+<h3>📚 Easy Notes</h3>
+<p>Simple and understandable notes for all subjects.</p>
+</div>
+
+<div class="feature-box">
+<h3>🎥 Video Lessons</h3>
+<p>Watch engaging lessons anytime.</p>
+</div>
+
+<div class="feature-box">
+<h3>📝 Practice Tests</h3>
+<p>Improve your learning with quizzes and tests.</p>
+</div>
+
+<div class="feature-box">
+<h3>🚀 Fast Learning</h3>
+<p>Study smarter with organized content.</p>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>LearnHub</h2>
+
+<p>Made for students with ❤️</p>
+
+<p>© 2026 LearnHub. All rights reserved.</p>
+
+</footer>
 
 </body>
 </html>
