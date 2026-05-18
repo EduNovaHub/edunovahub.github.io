@@ -4,7 +4,44 @@
 <title>Maths Notes</title>
 
 <style>
+.chapter-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
 
+.chapter-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+text-align:center;
+}
+
+.chapter-card:hover{
+transform:translateY(-8px);
+}
+
+.chapter-card h2{
+color:#2563eb;
+margin-bottom:10px;
+}
+
+.chapter-card p{
+color:#555;
+margin-bottom:20px;
+}
+
+.chapter-card button{
+background:#2563eb;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+cursor:pointer;
+}
 body{
 font-family:Poppins,sans-serif;
 background:#f5f7ff;
