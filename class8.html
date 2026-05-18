@@ -3,47 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LearnHub - Class 8</title>
+
+<title>EduNovaHub - Class 8</title>
 
 <style>
-.dark-btn{
-padding:10px 15px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-font-size:18px;
-background:white;
-}
 
-.dark{
-background:#111827;
-color:white;
-}
-
-.dark .card,
-.dark .feature-box{
-background:#1f2937;
-color:white;
-}
-
-.dark .search-box input{
-background:#1f2937;
-color:white;
-}
-
-.dark footer{
-background:black;
-}
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
 background:#f4f7fb;
 color:#333;
+transition:0.4s;
 }
 
 /* NAVBAR */
@@ -58,10 +34,11 @@ color:white;
 position:sticky;
 top:0;
 z-index:1000;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 }
 
@@ -82,10 +59,19 @@ nav ul li a:hover{
 color:yellow;
 }
 
+.dark-btn{
+padding:10px 15px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:18px;
+background:white;
+}
+
 /* HERO */
 
 .hero{
-height:60vh;
+height:70vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -97,14 +83,16 @@ padding:20px;
 }
 
 .hero h1{
-font-size:55px;
+font-size:60px;
 margin-bottom:20px;
+animation:fade 1s ease;
 }
 
 .hero p{
 font-size:20px;
-margin-bottom:30px;
 max-width:700px;
+margin-bottom:30px;
+animation:fade 2s ease;
 }
 
 .hero button{
@@ -123,7 +111,7 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* SEARCH BAR */
+/* SEARCH */
 
 .search-box{
 text-align:center;
@@ -141,16 +129,17 @@ font-size:16px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* SECTION TITLE */
+/* HEADING */
 
 .heading{
 text-align:center;
 font-size:40px;
+margin-top:30px;
 margin-bottom:40px;
 color:#4f46e5;
 }
 
-/* SUBJECT CARDS */
+/* SUBJECTS */
 
 .subjects{
 display:grid;
@@ -211,11 +200,42 @@ padding:25px;
 border-radius:20px;
 text-align:center;
 box-shadow:0 6px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.feature-box:hover{
+transform:translateY(-10px);
 }
 
 .feature-box h3{
 margin-bottom:15px;
 color:#4f46e5;
+}
+
+/* COUNTERS */
+
+.counter-section{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:40px;
+flex-wrap:wrap;
+}
+
+.counter-box{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+width:220px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+.counter{
+font-size:40px;
+font-weight:bold;
+color:#4f46e5;
+margin-bottom:10px;
 }
 
 /* FOOTER */
@@ -228,30 +248,87 @@ padding:30px;
 margin-top:50px;
 }
 
-footer p{
-margin:10px 0;
+/* DARK MODE */
+
+.dark{
+background:#111827;
+color:white;
+}
+
+.dark .card,
+.dark .feature-box,
+.dark .counter-box{
+background:#1f2937;
+color:white;
+}
+
+.dark .search-box input{
+background:#1f2937;
+color:white;
+}
+
+.dark footer{
+background:black;
+}
+
+/* ANIMATION */
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.search-box input{
+width:90%;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
 }
 
 </style>
-
 </head>
+
 <body>
 
 <!-- NAVBAR -->
 
 <nav>
 
-<div class="logo">LearnHub</div>
+<div class="logo">EduNovaHub</div>
 
 <ul>
-  <button class="dark-btn" onclick="darkMode()">
-🌙
-</button>
 <li><a href="#">Home</a></li>
 <li><a href="#">Classes</a></li>
 <li><a href="#">Notes</a></li>
+<li><a href="#">Videos</a></li>
 <li><a href="#">Contact</a></li>
 </ul>
+
+<button class="dark-btn" onclick="darkMode()">
+🌙
+</button>
 
 </nav>
 
@@ -259,11 +336,11 @@ margin:10px 0;
 
 <section class="hero">
 
-<h1>Welcome to LearnHub</h1>
+<h1>Welcome to EduNovaHub</h1>
 
 <p>
-The best learning platform for students.
-Explore notes, videos, quizzes, and study materials.
+A modern learning platform for students.
+Study smarter with notes, videos, quizzes and interactive learning.
 </p>
 
 <button onclick="document.getElementById('subjects').scrollIntoView({behavior:'smooth'})">
@@ -272,7 +349,7 @@ Start Learning
 
 </section>
 
-<!-- SEARCH BAR -->
+<!-- SEARCH -->
 
 <div class="search-box">
 
@@ -287,26 +364,38 @@ Start Learning
 <section class="subjects" id="subjects">
 
 <div class="card">
-<h2>Mathematics</h2>
-<p>Learn algebra, geometry, and more.</p>
+<h2>📘 Mathematics</h2>
+<p>Learn algebra, geometry, mensuration and more.</p>
 <button>Open Subject</button>
 </div>
 
 <div class="card">
-<h2>Science</h2>
-<p>Physics, Chemistry and Biology notes.</p>
+<h2>🔬 Science</h2>
+<p>Physics, Chemistry and Biology simplified.</p>
 <button>Open Subject</button>
 </div>
 
 <div class="card">
-<h2>English</h2>
-<p>Grammar, writing, and literature.</p>
+<h2>📖 English</h2>
+<p>Grammar, literature and writing skills.</p>
 <button>Open Subject</button>
 </div>
 
 <div class="card">
-<h2>Social Science</h2>
-<p>History, Geography and Civics.</p>
+<h2>🌍 Social Science</h2>
+<p>History, Geography and Civics notes.</p>
+<button>Open Subject</button>
+</div>
+
+<div class="card">
+<h2>💻 Computer</h2>
+<p>Programming basics and computer knowledge.</p>
+<button>Open Subject</button>
+</div>
+
+<div class="card">
+<h2>🧠 GK & Reasoning</h2>
+<p>Improve IQ and logical thinking skills.</p>
 <button>Open Subject</button>
 </div>
 
@@ -314,28 +403,56 @@ Start Learning
 
 <!-- FEATURES -->
 
-<h1 class="heading">Why Students Love LearnHub</h1>
+<h1 class="heading">Why Students Love EduNovaHub</h1>
 
 <section class="features">
 
 <div class="feature-box">
 <h3>📚 Easy Notes</h3>
-<p>Simple and understandable notes for all subjects.</p>
+<p>Simple and understandable study materials.</p>
 </div>
 
 <div class="feature-box">
 <h3>🎥 Video Lessons</h3>
-<p>Watch engaging lessons anytime.</p>
+<p>Learn visually with engaging videos.</p>
 </div>
 
 <div class="feature-box">
 <h3>📝 Practice Tests</h3>
-<p>Improve your learning with quizzes and tests.</p>
+<p>Improve learning with quizzes and tests.</p>
 </div>
 
 <div class="feature-box">
 <h3>🚀 Fast Learning</h3>
-<p>Study smarter with organized content.</p>
+<p>Organized content helps students learn faster.</p>
+</div>
+
+</section>
+
+<!-- COUNTERS -->
+
+<h1 class="heading">Our Achievements</h1>
+
+<section class="counter-section">
+
+<div class="counter-box">
+<div class="counter">500+</div>
+<p>Students</p>
+</div>
+
+<div class="counter-box">
+<div class="counter">50+</div>
+<p>Courses</p>
+</div>
+
+<div class="counter-box">
+<div class="counter">100+</div>
+<p>Notes</p>
+</div>
+
+<div class="counter-box">
+<div class="counter">24/7</div>
+<p>Support</p>
 </div>
 
 </section>
@@ -344,13 +461,16 @@ Start Learning
 
 <footer>
 
-<h2>LearnHub</h2>
+<h2>EduNovaHub</h2>
 
 <p>Made for students with ❤️</p>
 
-<p>© 2026 LearnHub. All rights reserved.</p>
+<p>© 2026 EduNovaHub. All rights reserved.</p>
 
 </footer>
+
+<!-- JAVASCRIPT -->
+
 <script>
 
 function darkMode(){
@@ -358,5 +478,6 @@ document.body.classList.toggle("dark");
 }
 
 </script>
+
 </body>
 </html>
