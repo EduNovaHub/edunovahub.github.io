@@ -1,87 +1,321 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>EduNovaHub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyNova</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
-body{
-  margin:0;
-  font-family:Arial;
-}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
 
-/* your old CSS */
+    body{
+      background:#f5f7ff;
+      color:#222;
+    }
 
-.container{
-  padding:20px;
-}
+    /* NAVBAR */
 
-.section-title{
-  font-size:28px;
-  margin-bottom:20px;
-  font-weight:bold;
-}
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:20px;
-}
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      color:#2563eb;
+    }
 
-.card{
-  background:#2563eb;
-  color:white;
-  padding:30px;
-  border-radius:15px;
-  text-align:center;
-  font-size:22px;
-  font-weight:bold;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
 
-.card:hover{
-  transform:scale(1.05);
-}
+    nav ul li a{
+      text-decoration:none;
+      color:#333;
+      font-weight:500;
+      transition:0.3s;
+    }
 
-</style>
+    nav ul li a:hover{
+      color:#2563eb;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      min-height:90vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:40px;
+      background:linear-gradient(to right,#2563eb,#4f46e5);
+      color:white;
+    }
+
+    .hero-content h1{
+      font-size:65px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      font-size:22px;
+      margin-bottom:30px;
+      line-height:1.6;
+    }
+
+    .hero-btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:white;
+      color:#2563eb;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .hero-btn:hover{
+      transform:scale(1.05);
+    }
+
+    /* SUBJECT SECTION */
+
+    .subjects{
+      padding:80px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:50px;
+      color:#222;
+    }
+
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      padding:35px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h2{
+      margin:20px 0;
+      color:#2563eb;
+    }
+
+    .card p{
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    .card a{
+      text-decoration:none;
+      background:#2563eb;
+      color:white;
+      padding:10px 20px;
+      border-radius:10px;
+      display:inline-block;
+    }
+
+    /* FEATURES */
+
+    .features{
+      padding:80px 8%;
+      background:white;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .feature{
+      padding:30px;
+      border-radius:15px;
+      background:#f5f7ff;
+      text-align:center;
+    }
+
+    .feature h3{
+      margin:15px 0;
+      color:#2563eb;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#111827;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .hero-content h1{
+        font-size:42px;
+      }
+
+      .hero-content p{
+        font-size:18px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        gap:15px;
+      }
+
+    }
+
+  </style>
 </head>
+<body>
 
->
-</a><body>
+  <!-- NAVBAR -->
 
-  <div class="navbar">
-    <h2>EduNovaHub</h2>
-  </div>
+  <nav>
+    <div class="logo">StudyNova</div>
 
-  <div class="hero">
-    <h1>Welcome to EduNovaHub</h1>
-    <p>Free Notes, PDFs, PYQs & Study Materials</p>
-  </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Notes</a></li>
+      <li><a href="#">Classes</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
 
-  <div class="container">
+  <!-- HERO SECTION -->
 
-    <div class="section-title">
-      Classes
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>StudyNova</h1>
+
+      <p>
+        Free Notes, Study Material and Chapter-wise Resources
+        for Class 8 Students.
+      </p>
+
+      <a href="class8.html" class="hero-btn">
+        Start Learning
+      </a>
+
     </div>
 
-    <div class="grid">
+  </section>
 
-<a href="class8.html" class="card">Class 8</a>
+  <!-- SUBJECT SECTION -->
 
-<a href="class9.html" class="card">Class 9</a>
+  <section class="subjects">
 
-<a href="class10.html" class="card">Class 10</a>
+    <h1 class="section-title">Subjects</h1>
 
-<a href="class11.html" class="card">Class 11</a>
+    <div class="card-container">
 
-<a href="class12.html" class="card">Class 12</a>
+      <div class="card">
+        <h2>📘 Maths</h2>
+        <p>Chapter-wise Maths Notes and Formulas.</p>
+        <a href="maths.html">Open</a>
+      </div>
 
-</div>
+      <div class="card">
+        <h2>🔬 Science</h2>
+        <p>Easy Science Notes for quick revision.</p>
+        <a href="science.html">Open</a>
+      </div>
 
-  </div>
+      <div class="card">
+        <h2>🌍 SST</h2>
+        <p>Social Science Notes and Important Questions.</p>
+        <a href="sst.html">Open</a>
+      </div>
+
+      <div class="card">
+        <h2>📖 English</h2>
+        <p>English Chapters, Grammar and Summaries.</p>
+        <a href="english.html">Open</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURES -->
+
+  <section class="features">
+
+    <h1 class="section-title">Why StudyNova?</h1>
+
+    <div class="feature-grid">
+
+      <div class="feature">
+        <h3>📚 Free Notes</h3>
+        <p>Completely free educational resources.</p>
+      </div>
+
+      <div class="feature">
+        <h3>⚡ Fast Learning</h3>
+        <p>Quick revision notes for exams.</p>
+      </div>
+
+      <div class="feature">
+        <h3>📱 Mobile Friendly</h3>
+        <p>Works smoothly on phones and laptops.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 StudyNova | Made for Students
+    </p>
+
+  </footer>
 
 </body>
-
 </html>
