@@ -6,6 +6,19 @@
 <title>EduNovaHub</title>
 
 <style>
+  .search-bar{
+width:100%;
+max-width:500px;
+padding:15px;
+margin:20px auto 40px;
+display:block;
+border:none;
+border-radius:12px;
+font-size:18px;
+outline:none;
+background:#1e293b;
+color:white;
+}
 html{
 scroll-behavior:smooth;
 }
@@ -239,7 +252,12 @@ Start Learning
 <section class="subjects" id="subjects">
 
 <h2>Subjects</h2>
-
+<input
+type="text"
+id="searchBar"
+placeholder="Search subjects..."
+onkeyup="searchSubjects()"
+class="search-bar">
 <div class="subject-grid">
 
 <div class="subject-card">
@@ -278,6 +296,34 @@ Start Learning
 <p>© 2025 EduNovaHub | Made By You 🚀</p>
 
 </footer>
+<script>
 
+function searchSubjects(){
+
+let input =
+document.getElementById("searchBar")
+.value.toLowerCase();
+
+let cards =
+document.querySelectorAll(".subject-card");
+
+cards.forEach(card=>{
+
+let text =
+card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display="block";
+}
+
+else{
+card.style.display="none";
+}
+
+});
+
+}
+
+</script>
 </body>
 </html>
