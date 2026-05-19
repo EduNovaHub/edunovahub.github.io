@@ -6,6 +6,20 @@
 <title>EduNovaHub</title>
 
 <style>
+  .fade-in{
+
+opacity:0;
+transform:translateY(30px);
+transition:all 1s ease;
+
+}
+
+.fade-in.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
   #clock{
 font-size:18px;
 font-weight:bold;
@@ -330,7 +344,7 @@ Start Learning
 
 <!-- LATEST UPDATES -->
 
-<section class="updates">
+<section class="updates fade-in">
 
 <h2>Latest Updates</h2>
 
@@ -350,7 +364,7 @@ Start Learning
 
 <!-- SUBJECTS -->
 
-<section class="subjects" id="subjects">
+<section class="subjects fade-in" id="subjects">
 
 <h2>Subjects</h2>
 <input
@@ -512,6 +526,29 @@ document.getElementById("clock")
 setInterval(updateClock,1000);
 
 updateClock();
+
+</script>
+  <script>
+
+let faders =
+document.querySelectorAll(".fade-in");
+
+window.addEventListener("scroll",()=>{
+
+faders.forEach(fader=>{
+
+let top =
+fader.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 100){
+
+fader.classList.add("show");
+
+}
+
+});
+
+});
 
 </script>
 </body>
