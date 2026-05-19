@@ -6,6 +6,38 @@
 <title>EduNovaHub</title>
 
 <style>
+  .light-mode{
+background:white;
+color:black;
+}
+
+.light-mode nav{
+background:#e2e8f0;
+}
+
+.light-mode .subject-card{
+background:#f1f5f9;
+color:black;
+}
+
+.light-mode .update-box{
+background:#f1f5f9;
+color:black;
+}
+  #modeBtn{
+padding:10px 15px;
+border:none;
+border-radius:10px;
+background:#38bdf8;
+color:white;
+cursor:pointer;
+font-size:18px;
+transition:0.3s;
+}
+
+#modeBtn:hover{
+background:#0ea5e9;
+}
   .search-bar{
 width:100%;
 max-width:500px;
@@ -225,7 +257,9 @@ transform:scale(1.1);
 <li><a href="#">About</a></li>
 <li><a href="#">Contact</a></li>
 </ul>
-
+<button onclick="toggleMode()" id="modeBtn">
+🌙
+</button>
 </nav>
 
 <!-- HERO SECTION -->
@@ -374,6 +408,15 @@ window.scrollTo({
 top:0,
 behavior:"smooth"
 });
+
+}
+
+</script>
+  <script>
+
+function toggleMode(){
+
+document.body.classList.toggle("light-mode");
 
 }
 
