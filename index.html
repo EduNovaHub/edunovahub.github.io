@@ -6,6 +6,92 @@
 <title>EduNovaHub</title>
 
 <style>
+  .glow{
+
+position:absolute;
+border-radius:50%;
+filter:blur(80px);
+
+}
+
+.glow1{
+
+width:300px;
+height:300px;
+background:#0ea5e9;
+top:-50px;
+left:-50px;
+
+}
+
+.glow2{
+
+width:250px;
+height:250px;
+background:#38bdf8;
+bottom:-50px;
+right:-50px;
+
+}
+  .hero-content{
+
+z-index:2;
+
+}
+
+.hero h1{
+
+font-size:70px;
+margin-bottom:20px;
+
+background:linear-gradient(
+to right,
+#38bdf8,
+white
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.hero h2{
+
+font-size:40px;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:22px;
+color:#cbd5e1;
+margin-bottom:30px;
+
+}
+
+.hero button{
+
+padding:18px 40px;
+font-size:20px;
+border:none;
+border-radius:15px;
+background:#38bdf8;
+color:white;
+cursor:pointer;
+transition:0.3s;
+
+animation:float 2s ease-in-out infinite;
+
+}
+
+.hero button:hover{
+
+transform:scale(1.08);
+background:#0ea5e9;
+box-shadow:0 0 25px #38bdf8;
+
+}
   .stats{
 
 display:flex;
@@ -356,13 +442,24 @@ color:#38bdf8;
 /* HERO SECTION */
 
 .hero{
-height:90vh;
+
+height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+
+background:
+linear-gradient(
+135deg,
+rgba(14,165,233,0.2),
+rgba(15,23,42,0.9)
+);
+
+position:relative;
+overflow:hidden;
+
 }
 
 .hero h2{
@@ -520,17 +617,28 @@ transform:scale(1.1);
 <!-- HERO SECTION -->
 
 <section class="hero">
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<div class="hero-content">
+
+<h1>
+EduNovaHub 🚀
+</h1>
 
 <h2 id="typing"></h2>
 
 <p>
-Free educational notes, videos, quizzes and learning materials
-for Class 8 students.
+The Future of Smart Learning for Class 8–10 Students
 </p>
 
-<button onclick="document.getElementById('subjects').scrollIntoView()">
+<a href="#subjects">
+<button>
 Start Learning
 </button>
+</a>
+
+</div>
 
 </section>
 
