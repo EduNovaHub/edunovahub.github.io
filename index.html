@@ -3,34 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>StudyNova</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>EduNovaHub - Learning Portal</title>
 
   <style>
-.about{
-padding:80px 10%;
-text-align:center;
-background:#eef2ff;
-}
-
-.about-text{
-max-width:700px;
-margin:auto;
-font-size:18px;
-line-height:1.8;
-color:#444;
-}
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
+      font-family:Arial, sans-serif;
     }
 
     body{
-      background:#f5f7ff;
-      color:#222;
+      background: linear-gradient(to right,#0f172a,#1e293b);
+      color:white;
+      min-height:100vh;
     }
 
     /* NAVBAR */
@@ -39,87 +25,95 @@ color:#444;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:20px 8%;
-      background:white;
-      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      padding:20px 50px;
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(10px);
       position:sticky;
       top:0;
-      z-index:100;
     }
 
-    .logo{
-      font-size:28px;
-      font-weight:700;
-      color:#2563eb;
+    nav h1{
+      color:#38bdf8;
+      font-size:32px;
     }
 
     nav ul{
       display:flex;
+      gap:25px;
       list-style:none;
-      gap:30px;
     }
 
     nav ul li a{
       text-decoration:none;
-      color:#333;
-      font-weight:500;
+      color:white;
       transition:0.3s;
+      font-size:18px;
     }
 
     nav ul li a:hover{
-      color:#2563eb;
+      color:#38bdf8;
     }
 
     /* HERO SECTION */
 
     .hero{
-      min-height:90vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
       text-align:center;
-      padding:40px;
-      background:linear-gradient(to right,#2563eb,#4f46e5);
-      color:white;
+      padding:100px 20px;
     }
 
-    .hero-content h1{
-      font-size:65px;
+    .hero h2{
+      font-size:55px;
       margin-bottom:20px;
     }
 
-    .hero-content p{
+    .hero p{
       font-size:22px;
-      margin-bottom:30px;
-      line-height:1.6;
+      color:#cbd5e1;
+      margin-bottom:35px;
     }
 
-    .hero-btn{
-      display:inline-block;
+    .hero button{
       padding:15px 35px;
-      background:white;
-      color:#2563eb;
-      text-decoration:none;
-      border-radius:12px;
-      font-weight:600;
+      border:none;
+      border-radius:10px;
+      background:#38bdf8;
+      color:white;
+      font-size:20px;
+      cursor:pointer;
       transition:0.3s;
     }
 
-    .hero-btn:hover{
+    .hero button:hover{
+      background:#0ea5e9;
       transform:scale(1.05);
     }
 
     /* SUBJECT SECTION */
 
     .subjects{
-      padding:80px 8%;
+      padding:60px 40px;
     }
 
-    .section-title{
+    .subjects h2{
       text-align:center;
+      margin-bottom:40px;
       font-size:40px;
-      margin-bottom:50px;
-      color:#222;
+      color:#38bdf8;
+    }
+
+    .search-box{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .search-box input{
+      width:60%;
+      max-width:500px;
+      padding:15px;
+      border:none;
+      border-radius:10px;
+      outline:none;
+      font-size:18px;
     }
 
     .card-container{
@@ -129,109 +123,90 @@ color:#444;
     }
 
     .card{
-      background:white;
-      padding:35px;
+      background:rgba(255,255,255,0.08);
+      padding:30px;
       border-radius:20px;
       text-align:center;
-      box-shadow:0 5px 15px rgba(0,0,0,0.08);
       transition:0.3s;
     }
 
     .card:hover{
       transform:translateY(-10px);
+      background:rgba(255,255,255,0.15);
     }
 
-    .card h2{
-      margin:20px 0;
-      color:#2563eb;
+    .card h3{
+      margin-bottom:15px;
+      color:#38bdf8;
+      font-size:28px;
     }
 
     .card p{
-      color:#666;
+      color:#cbd5e1;
       margin-bottom:20px;
     }
 
     .card a{
       text-decoration:none;
-      background:#2563eb;
+      background:#38bdf8;
       color:white;
-      padding:10px 20px;
+      padding:12px 20px;
       border-radius:10px;
       display:inline-block;
+      transition:0.3s;
     }
 
-    /* FEATURES */
-
-    .features{
-      padding:80px 8%;
-      background:white;
-    }
-
-    .feature-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:30px;
-    }
-
-    .feature{
-      padding:30px;
-      border-radius:15px;
-      background:#f5f7ff;
-      text-align:center;
-    }
-
-    .feature h3{
-      margin:15px 0;
-      color:#2563eb;
+    .card a:hover{
+      background:#0ea5e9;
     }
 
     /* FOOTER */
 
     footer{
-      background:#111827;
-      color:white;
       text-align:center;
       padding:25px;
       margin-top:50px;
+      background:rgba(255,255,255,0.05);
+      color:#cbd5e1;
     }
 
     /* MOBILE */
 
     @media(max-width:768px){
 
-      .hero-content h1{
-        font-size:42px;
-      }
-
-      .hero-content p{
-        font-size:18px;
-      }
-
       nav{
         flex-direction:column;
         gap:15px;
       }
 
-      nav ul{
-        gap:15px;
+      .hero h2{
+        font-size:40px;
       }
 
+      .hero p{
+        font-size:18px;
+      }
+
+      .search-box input{
+        width:90%;
+      }
     }
 
   </style>
 </head>
+
 <body>
 
   <!-- NAVBAR -->
 
   <nav>
-    <div class="logo">StudyNova</div>
+    <h1>EduNovaHub</h1>
 
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#">Notes</a></li>
-      <li><a href="#">Classes</a></li>
+      <li><a href="#subjects">Subjects</a></li>
       <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
@@ -239,104 +214,149 @@ color:#444;
 
   <section class="hero">
 
-    <div class="hero-content">
+    <h2>Welcome to EduNovaHub</h2>
 
-      <h1>StudyNova</h1>
+    <p>
+      Learn smarter with interactive subjects,
+      notes, chapters, and quizzes.
+    </p>
 
-      <p>
-        Free Notes, Study Material and Chapter-wise Resources
-        for Class 8 Students.
-      </p>
-
-      <a href="class8.html" class="hero-btn">
-        Start Learning
-      </a>
-
-    </div>
+    <button onclick="scrollToSubjects()">
+      Start Learning
+    </button>
 
   </section>
 
   <!-- SUBJECT SECTION -->
 
-  <section class="subjects">
+  <section class="subjects" id="subjects">
 
-    <h1 class="section-title">Subjects</h1>
+    <h2>Choose Your Subject</h2>
 
-    <div class="card-container">
+    <!-- SEARCH BAR -->
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search subjects..."
+        onkeyup="searchSubjects()"
+      />
+    </div>
+
+    <!-- SUBJECT CARDS -->
+
+    <div class="card-container" id="subjectCards">
+
+      <!-- MATHS -->
 
       <div class="card">
-        <h2>📘 Maths</h2>
-        <p>Chapter-wise Maths Notes and Formulas.</p>
-        <a href="maths.html">Open</a>
+        <h3>Mathematics</h3>
+
+        <p>
+          Learn algebra, geometry,
+          mensuration, and more.
+        </p>
+
+        <a href="maths.html">
+          Open Subject
+        </a>
       </div>
 
-      <div class="card">
-        <h2>🔬 Science</h2>
-        <p>Easy Science Notes for quick revision.</p>
-        <a href="science.html">Open</a>
-      </div>
+      <!-- SCIENCE -->
 
       <div class="card">
-        <h2>🌍 SST</h2>
-        <p>Social Science Notes and Important Questions.</p>
-        <a href="sst.html">Open</a>
+        <h3>Science</h3>
+
+        <p>
+          Physics, chemistry,
+          biology and experiments.
+        </p>
+
+        <a href="science.html">
+          Open Subject
+        </a>
       </div>
 
+      <!-- ENGLISH -->
+
       <div class="card">
-        <h2>📖 English</h2>
-        <p>English Chapters, Grammar and Summaries.</p>
-        <a href="english.html">Open</a>
+        <h3>English</h3>
+
+        <p>
+          Grammar, writing,
+          literature and speaking.
+        </p>
+
+        <a href="english.html">
+          Open Subject
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+
+      <div class="card">
+        <h3>Social Science</h3>
+
+        <p>
+          History, geography,
+          civics and economics.
+        </p>
+
+        <a href="social.html">
+          Open Subject
+        </a>
       </div>
 
     </div>
 
   </section>
 
-  <!-- FEATURES -->
-
-  <section class="features">
-
-    <h1 class="section-title">Why StudyNova?</h1>
-
-    <div class="feature-grid">
-
-      <div class="feature">
-        <h3>📚 Free Notes</h3>
-        <p>Completely free educational resources.</p>
-      </div>
-
-      <div class="feature">
-        <h3>⚡ Fast Learning</h3>
-        <p>Quick revision notes for exams.</p>
-      </div>
-
-      <div class="feature">
-        <h3>📱 Mobile Friendly</h3>
-        <p>Works smoothly on phones and laptops.</p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="about">
-
-<h1 class="section-title">About StudyNova</h1>
-
-<p class="about-text">
-StudyNova is a free educational platform made for Class 8 students.
-Here students can access notes, chapter resources, and study materials easily.
-</p>
-
-</section><!-- FOOTER -->
+  <!-- FOOTER -->
 
   <footer>
-
-    <p>
-      © 2026 StudyNova | Made for Students
-    </p>
-
+    © 2026 EduNovaHub | Learn Smart 🚀
   </footer>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    function scrollToSubjects(){
+      document
+      .getElementById("subjects")
+      .scrollIntoView({
+        behavior:"smooth"
+      });
+    }
+
+    function searchSubjects(){
+
+      let input =
+      document.getElementById("searchInput")
+      .value.toLowerCase();
+
+      let cards =
+      document.querySelectorAll(".card");
+
+      cards.forEach(card=>{
+
+        let text =
+        card.innerText.toLowerCase();
+
+        if(text.includes(input)){
+          card.style.display="block";
+        }
+
+        else{
+          card.style.display="none";
+        }
+
+      });
+
+    }
+
+  </script>
 
 </body>
 </html>
