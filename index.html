@@ -6,6 +6,12 @@
 <title>EduNovaHub</title>
 
 <style>
+  #clock{
+font-size:18px;
+font-weight:bold;
+color:#38bdf8;
+margin-left:20px;
+}
   @keyframes gradientBG{
 
 0%{
@@ -302,6 +308,7 @@ transform:scale(1.1);
 <button onclick="toggleMode()" id="modeBtn">
 🌙
 </button>
+  <div id="clock"></div>
 </nav>
 
 <!-- HERO SECTION -->
@@ -486,6 +493,25 @@ setTimeout(typeEffect,35);
 }
 
 typeEffect();
+
+</script>
+  <script>
+
+function updateClock(){
+
+let now = new Date();
+
+let time =
+now.toLocaleTimeString();
+
+document.getElementById("clock")
+.innerHTML = time;
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
 
 </script>
 </body>
