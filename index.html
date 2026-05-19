@@ -189,7 +189,25 @@ padding:20px;
 text-align:center;
 margin-top:50px;
 }
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+padding:15px 20px;
+font-size:20px;
+border:none;
+border-radius:50%;
+background:#38bdf8;
+color:white;
+cursor:pointer;
+display:none;
+transition:0.3s;
+}
 
+#topBtn:hover{
+background:#0ea5e9;
+transform:scale(1.1);
+}
 </style>
 </head>
 
@@ -320,6 +338,41 @@ else{
 card.style.display="none";
 }
 
+});
+
+}
+
+</script>
+  <button onclick="topFunction()" id="topBtn">
+⬆
+</button>
+  <script>
+
+let topBtn =
+document.getElementById("topBtn");
+
+window.onscroll = function(){
+
+if(document.body.scrollTop > 200 ||
+document.documentElement.scrollTop > 200){
+
+topBtn.style.display = "block";
+
+}
+
+else{
+
+topBtn.style.display = "none";
+
+}
+
+};
+
+function topFunction(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
 });
 
 }
