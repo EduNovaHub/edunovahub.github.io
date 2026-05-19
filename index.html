@@ -266,7 +266,7 @@ transform:scale(1.1);
 
 <section class="hero">
 
-<h2>Start Learning Smarter</h2>
+<h2 id="typing"></h2>
 
 <p>
 Free educational notes, videos, quizzes and learning materials
@@ -419,6 +419,31 @@ function toggleMode(){
 document.body.classList.toggle("light-mode");
 
 }
+
+</script>
+  <script>
+
+let text =
+"Start Learning Smarter 🚀";
+
+let index = 0;
+
+function typeEffect(){
+
+if(index < text.length){
+
+document.getElementById("typing")
+.innerHTML += text.charAt(index);
+
+index++;
+
+setTimeout(typeEffect,100);
+
+}
+
+}
+
+typeEffect();
 
 </script>
 </body>
