@@ -6,6 +6,36 @@
   <title>EduNovaHub - Learning Portal</title>
 
   <style>
+    .stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+padding:60px 40px;
+}
+
+.stat-box{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:0.3s;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,0.15);
+}
+
+.stat-box h1{
+font-size:45px;
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.stat-box p{
+color:#cbd5e1;
+font-size:18px;
+}
     *{
       margin:0;
       padding:0;
@@ -311,7 +341,29 @@
     </div>
 
   </section>
+<section class="stats">
 
+<div class="stat-box">
+<h1>500+</h1>
+<p>Students</p>
+</div>
+
+<div class="stat-box">
+<h1>50+</h1>
+<p>Courses</p>
+</div>
+
+<div class="stat-box">
+<h1>100+</h1>
+<p>Notes</p>
+</div>
+
+<div class="stat-box">
+<h1>24/7</h1>
+<p>Support</p>
+</div>
+
+</section>
   <!-- FOOTER -->
 
   <footer>
