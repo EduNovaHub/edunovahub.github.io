@@ -6,6 +6,21 @@
 <title>EduNovaHub</title>
 
 <style>
+  @keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
   .light-mode{
 background:white;
 color:black;
@@ -125,6 +140,7 @@ line-height:1.6;
 }
 
 .hero button{
+  animation:float 2s ease-in-out infinite;
 padding:15px 35px;
 font-size:20px;
 border:none;
