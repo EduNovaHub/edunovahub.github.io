@@ -6,6 +6,35 @@
 <title>EduNovaHub</title>
 
 <style>
+  .subjects{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:40px;
+
+}
+
+.subject-box{
+
+padding:20px 40px;
+background:rgba(255,255,255,0.1);
+border-radius:15px;
+color:white;
+font-size:20px;
+backdrop-filter:blur(8px);
+transition:0.3s;
+cursor:pointer;
+
+}
+
+.subject-box:hover{
+
+transform:scale(1.08);
+background:#38bdf8;
+
+}
   .card{
 
 width:300px;
@@ -1028,5 +1057,16 @@ Learn Smart. Grow Fast. 🚀
 </p>
 
 </footer>
+  <div class="subjects">
+
+<div class="subject-box">Math</div>
+
+<div class="subject-box">Science</div>
+
+<div class="subject-box">English</div>
+
+<div class="subject-box">SST</div>
+
+</div>
 </body>
 </html>
